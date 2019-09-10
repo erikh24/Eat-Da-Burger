@@ -1,19 +1,39 @@
-{{!-- Setup the index.handlebars to have the template that Handlebars can render onto.
-Create a button in index.handlebars that will submit the user input into the database. --}}
+<div class="header">
+  <img src="/assets/img/Burger.png" alt="hamburger picture">
+  <h1>Eat-Da-Burger</h1>
+</div>
 
+<br>
 
-<img src='../public/assets/img/Burger.png' atl="picture of a burger">
-
-<h2>Eat-Da-Burger!</h2>
-
-{{!-- This is where the burgers will go once they are added using the form below. --}}
-
-<form class="create-burger"></form>
-    <div class="form-group">
-        <input type="text" id="burger-input" name="name">
+<div class="containter">
+  <div id="burgersHolder">
+    <div id="burgersReadyToEat">
+      <h2>Burgers That Are Ready to Eat</h2>
+      {{#each burgersReadyToEat}}
+      <div class="theBurgers">
+        <h3>{{this.burger_name}}</h3>
+        <button class="devourButton btn-warning" onclick="update({{this.id}})">Devour It!</button>
+      </div>
+      {{/each}}
     </div>
-    <div>
-        <button type="submit">Submit</button>
-        <h4>Enter a burger you want to eat. Click the "Submit" button.</h4>
+    
+    <br>
+
+    <div id="burgersDevoured">
+      <h2>Burgers That Have Been Devoured</h2>
+      {{#each burgersDevoured}}
+      <div class="theBurgers">
+        <h3>{{this.burger_name}}</h3>
+      </div>
+      {{/each}}
     </div>
-</form>
+  </div>
+  <form id="newBurger">
+    <label for="newBurgerName">Enter a burger you want to eat, then click the "Submit" button.</label>
+    <br>
+    <input type="text" id="newBurgerName" name="name">
+    <button class="btn-danger" id="submit" type="submit">Submit</button>
+  </form>
+</div>
+
+<br>
