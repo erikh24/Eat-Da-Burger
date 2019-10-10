@@ -8,10 +8,20 @@ body {
     font-size: 18px;
   }
 
+  h1 {
+    font-size: 55px;
+  }
+
 img {
     height: 20%;
     width: 20%;
     margin-top: 40px;
+}
+hr {  
+  background-color: #fe3c06;
+  color: black;
+  height: 5px;
+  width: 80%;
 }
 
 .header {
@@ -20,6 +30,7 @@ img {
 
 .theBurgers {
   color: blue;
+  font-style: italic;
 }
 
 #burgersReadyToEat {
@@ -27,7 +38,7 @@ img {
 }
 
 #burgersDevoured {
-  color: rgb(169, 7, 245)
+  color: purple;
   }
 
 #newBurger {
