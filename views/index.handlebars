@@ -13,8 +13,8 @@
       <h2>Burgers That Are Ready to Eat</h2>
       {{#each burgersReadyToEat}}
       <div class="theBurgers">
-        <h3>{{this.burger_name}}</h3>
-        <button class="devourButton btn-warning" onclick="update({{this.id}})">Devour It!</button>
+        <h3>{{this.burger_name}}<button class="devourButton btn-warning" onclick="update({{this.id}})">Devour It!</button></h3>
+        
       </div>
       {{/each}}
     </div>
